@@ -6,6 +6,7 @@ import { RiLoginBoxFill, RiLogoutBoxFill, RiUser3Fill } from 'react-icons/ri';
 import clsxm from '@/lib/clsxm';
 
 import SidebarGroup from '@/components/layout/sidebar/SidebarGroup';
+import NextImage from '@/components/NextImage';
 
 interface SidebarProps {
   className?: string;
@@ -18,9 +19,20 @@ export default function Sidebar({ className }: SidebarProps) {
     <div
       className={clsxm(
         className,
-        'flex select-none flex-col items-center justify-between pb-5 pt-5 text-white'
+        'flex select-none flex-col items-center justify-start gap-8 pb-5 pt-5 text-white'
       )}
     >
+      <NextImage
+        className=''
+        style={{
+          borderRadius: '30%',
+        }}
+        width={40}
+        height={40}
+        alt='logo'
+        useSkeleton
+        src='/favicon/favicon.ico'
+      />
       <SidebarGroup
         id='quick'
         active={router.asPath}
