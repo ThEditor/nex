@@ -23,7 +23,24 @@ export default {
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
-        dark: '#222222',
+        dark: 'rgb(var(--tw-color-dark) / <alpha-value>)',
+        light: 'rgb(var(--tw-color-light) / <alpha-value>)',
+        secondary: {
+          // Customize it on globals.css :root
+          50: 'rgb(var(--tw-color-secondary-50) / <alpha-value>)',
+          100: 'rgb(var(--tw-color-secondary-100) / <alpha-value>)',
+          200: 'rgb(var(--tw-color-secondary-200) / <alpha-value>)',
+          300: 'rgb(var(--tw-color-secondary-300) / <alpha-value>)',
+          400: 'rgb(var(--tw-color-secondary-400) / <alpha-value>)',
+          500: 'rgb(var(--tw-color-secondary-500) / <alpha-value>)',
+          600: 'rgb(var(--tw-color-secondary-600) / <alpha-value>)',
+          700: 'rgb(var(--tw-color-secondary-700) / <alpha-value>)',
+          800: 'rgb(var(--tw-color-secondary-800) / <alpha-value>)',
+          900: 'rgb(var(--tw-color-secondary-900) / <alpha-value>)',
+          950: 'rgb(var(--tw-color-secondary-950) / <alpha-value>)',
+        },
+        'dark-alt': 'rgb(var(--tw-color-dark-alt) / <alpha-value>)',
+        alt: 'rgb(var(--tw-color-alt) / <alpha-value>)',
       },
       keyframes: {
         flicker: {
