@@ -5,5 +5,5 @@ interface PlayerProps {
 }
 
 export default function Player({ className }: PlayerProps) {
-  return <div className={clsxm(className)}>adw</div>;
+  return <div className={clsxm(className)}></div>;
 }

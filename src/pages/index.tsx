@@ -1,14 +1,39 @@
 import * as React from 'react';
 
-import Seo from '@/components/Seo';
+import Carousel, { CarouselProps } from '@/components/carousel/Carousel';
+
+interface CarouselSection extends CarouselProps {
+  name: string;
+}
 
 export default function HomePage() {
+  const lists: CarouselSection[] = [
+    {
+      name: 'New Releases',
+      data: [
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+      ],
+    },
+  ];
   return (
-    <>
-      <Seo />
-      <main className='flex items-center justify-center'>
-        <h1>Hi!</h1>
-      </main>
-    </>
+    <div>
+      <ul className='m-8'>
+        {lists.map((v, i) => (
+          <li className='flex flex-col gap-4' key={i}>
+            <div className='font-quicksand text-light select-none text-2xl font-bold'>
+              {v.name}
+            </div>
+            <Carousel data={v.data} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
