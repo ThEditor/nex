@@ -23,7 +23,7 @@ function SidebarItem({ icon, active, clickAction, className }: SidebarItem) {
   return (
     <div className={clsxm(className)}>
       <IconButton
-        className={active ? '' : 'text-light opacity-60'}
+        className={active ? 'text-secondary-500 text-opacity-100' : ''}
         variant='secondary'
         icon={icon}
         onClick={() => clickAction()}
