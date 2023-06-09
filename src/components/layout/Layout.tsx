@@ -5,12 +5,12 @@ import Sidebar from '@/components/layout/sidebar/Sidebar';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='text-alt flex h-screen flex-col bg-[#1D2123]'>
+    <div className='text-alt bg-dark flex h-screen flex-col'>
       <div className='flex flex-grow'>
         <Sidebar className='w-[5%]' />
         <div className='flex-grow'>{children}</div>
       </div>
-      <Player className='h-[10%]' />
+      <Player className='h-[13%]' />
     </div>
   );
 }
