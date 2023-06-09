@@ -8,7 +8,7 @@ export interface CarouselProps {
 
 export default function Carousel({ data }: CarouselProps) {
   return (
-    <div>
+    <div className='flex gap-2'>
       {data.map((v, i) => (
         <CarouselItem
           key={i}
