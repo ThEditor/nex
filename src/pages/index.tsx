@@ -50,6 +50,69 @@ export default function HomePage() {
         },
       ],
     },
+    {
+      name: 'New Releases',
+      data: [
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+      ],
+    },
+    {
+      name: 'New Releases',
+      data: [
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+      ],
+    },
+    {
+      name: 'New Releases',
+      data: [
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+        {
+          title: 'Life in a bubble',
+          subtitle: 'The van',
+          clickAction: () => {
+            return;
+          },
+          imgSrc: '/images/test.png',
+        },
+      ],
+    },
   ];
   return (
     <div>
