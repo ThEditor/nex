@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className='text-alt bg-dark flex h-screen flex-col'>
       <div className='flex h-[87%]'>
         <Sidebar className='w-[5%]' />
-        <div className='h-full flex-grow overflow-y-scroll'>{children}</div>
+        <div className='h-full flex-grow overflow-y-auto'>{children}</div>
       </div>
       <Player className='h-[13%]' />
     </div>
