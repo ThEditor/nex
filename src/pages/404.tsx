@@ -6,12 +6,12 @@ import Seo from '@/components/Seo';
 
 export default function NotFoundPage() {
   return (
-    <>
+    <div className='h-full'>
       <Seo templateTitle='Not Found' />
 
-      <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
+      <main className='h-full'>
+        <section className='h-full bg-white'>
+          <div className='layout flex h-full flex-col items-center justify-center text-center text-black'>
             <RiAlarmWarningFill
               size={60}
               className='drop-shadow-glow animate-flicker text-red-500'
@@ -23,6 +23,6 @@ export default function NotFoundPage() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
