@@ -13,3 +13,8 @@ export const discord = {
 
 export const mongoDbUri =
   process.env.MONGODB_URI ?? 'mongodb://localhost:27017/';
+
+export const nex = {
+  url: process.env.NEX_CLOUD_URL!,
+  secret: process.env.NEX_CLOUD_SECRET!,
+};
