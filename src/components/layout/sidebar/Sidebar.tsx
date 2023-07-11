@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import { ImHome, ImSearch } from 'react-icons/im';
 import { RiLoginBoxFill, RiLogoutBoxFill, RiUser3Fill } from 'react-icons/ri';
 
@@ -14,7 +13,8 @@ interface SidebarProps {
 
 export default function Sidebar({ className }: SidebarProps) {
   const router = useRouter();
-  const { status } = useSession();
+  const signedIn = false;
+
   return (
     <div
       className={clsxm(
@@ -69,10 +69,9 @@ export default function Sidebar({ className }: SidebarProps) {
           },
           {
             id: 'auth',
-            icon: status === 'authenticated' ? RiLogoutBoxFill : RiLoginBoxFill,
+            icon: signedIn ? RiLogoutBoxFill : RiLoginBoxFill,
             clickAction: () => {
-              if (status === 'unauthenticated') signIn('discord');
-              if (status === 'authenticated') signOut();
+              // todo: implement signin
             },
           },
         ]}
