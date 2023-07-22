@@ -25,7 +25,7 @@ export default function LoginPage() {
           boxShadow: '0px -10px 50px 10px rgba(0, 0, 0, 0.3)',
         }}
       >
-        <h3>Sign In</h3>
+        <h3 className='text-light'>Sign In</h3>
         <label>Email</label>
         <input
           className='rounded-xl'

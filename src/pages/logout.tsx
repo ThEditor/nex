@@ -14,7 +14,7 @@ export default function LogoutPage() {
   }, [router, signedin]);
 
   return signedin ? (
-    <div className='flex h-full items-center justify-center'>
+    <div className='text-light flex h-full items-center justify-center'>
       <h1>Logging you out...</h1>
     </div>
   ) : (
