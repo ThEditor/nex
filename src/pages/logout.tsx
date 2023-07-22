@@ -1,0 +1,23 @@
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+export default function LogoutPage() {
+  const router = useRouter();
+  const signedin = true;
+
+  useEffect(() => {
+    if (signedin) {
+      // todo: request logout
+    }
+
+    router.push('/login');
+  }, [router, signedin]);
+
+  return signedin ? (
+    <div className='flex h-full items-center justify-center'>
+      <h1>Logging you out...</h1>
+    </div>
+  ) : (
+    <></>
+  );
+}

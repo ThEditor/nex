@@ -42,7 +42,6 @@ export default function Sidebar({ className }: SidebarProps) {
             icon: ImHome,
             clickAction: () => {
               if (router.asPath !== '/') router.push('/');
-              return;
             },
           },
           {
@@ -50,7 +49,6 @@ export default function Sidebar({ className }: SidebarProps) {
             icon: ImSearch,
             clickAction: () => {
               if (router.asPath !== '/search') router.push('/search');
-              return;
             },
           },
         ]}
@@ -64,14 +62,15 @@ export default function Sidebar({ className }: SidebarProps) {
             icon: RiUser3Fill,
             clickAction: () => {
               if (router.asPath !== '/account') router.push('/account');
-              return;
             },
           },
           {
             id: 'auth',
             icon: signedIn ? RiLogoutBoxFill : RiLoginBoxFill,
             clickAction: () => {
-              // todo: implement signin
+              if (!signedIn && router.asPath !== '/login')
+                router.push('/login');
+              if (signedIn) router.push('/logout');
             },
           },
         ]}
