@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 
 import Carousel, { CarouselProps } from '@/components/carousel/Carousel';
