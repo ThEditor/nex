@@ -7,12 +7,13 @@ import {
   ImVolumeHigh,
 } from 'react-icons/im';
 
+import '@/styles/globals.css';
+
 import clsxm from '@/lib/clsxm';
 
 import IconButton from '@/components/buttons/IconButton';
 import NextImage from '@/components/NextImage';
 import Slider from '@/components/Slider';
-
 interface PlayerProps {
   className?: string;
 }

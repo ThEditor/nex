@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router';
+'use client';
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { ImHome, ImSearch } from 'react-icons/im';
 import { RiLoginBoxFill, RiLogoutBoxFill, RiUser3Fill } from 'react-icons/ri';
 
@@ -14,6 +16,7 @@ interface SidebarProps {
 export default function Sidebar({ className }: SidebarProps) {
   const router = useRouter();
   const signedIn = false;
+  const pathname = usePathname();
 
   return (
     <div
@@ -35,40 +38,40 @@ export default function Sidebar({ className }: SidebarProps) {
       />
       <SidebarGroup
         id='quick'
-        active={router.asPath}
+        active={pathname}
         items={[
           {
             id: '/',
             icon: ImHome,
             clickAction: () => {
-              if (router.asPath !== '/') router.push('/');
+              if (pathname !== '/') router.push('/');
             },
           },
           {
             id: '/search',
             icon: ImSearch,
             clickAction: () => {
-              if (router.asPath !== '/search') router.push('/search');
+              if (pathname !== '/search') router.push('/search');
             },
           },
         ]}
       />
       <SidebarGroup
         id='/account'
-        active={router.asPath}
+        active={pathname}
         items={[
           {
             id: '/account',
             icon: RiUser3Fill,
             clickAction: () => {
-              if (router.asPath !== '/account') router.push('/account');
+              if (pathname !== '/account') router.push('/account');
             },
           },
           {
             id: 'auth',
             icon: signedIn ? RiLogoutBoxFill : RiLoginBoxFill,
             clickAction: () => {
-              if (!signedIn && router.asPath !== '/login')
+              if (!signedIn && pathname !== '/login')
                 router.push('/login');
               if (signedIn) router.push('/logout');
             },
