@@ -21,16 +21,20 @@ export const metadata = {
    * If you wish to use a normal image, just specify the path below
    */
   image: 'https://theditor.xyz/assets/img/profile-img.jpg',
-}
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='text-alt bg-dark flex h-screen flex-col'>
-      <div className='flex h-[87%]'>
-        <Sidebar className='w-[5%]' />
-        <div className='h-full flex-grow overflow-y-auto'>{children}</div>
-      </div>
-      <Player className='h-[13%]' />
-    </div>
+    <html>
+      <body>
+        <div className='text-alt bg-dark flex h-screen flex-col'>
+          <div className='flex h-[87%]'>
+            <Sidebar className='w-[5%]' />
+            <div className='h-full flex-grow overflow-y-auto'>{children}</div>
+          </div>
+          <Player className='h-[13%]' />
+        </div>
+      </body>
+    </html>
   );
 }
