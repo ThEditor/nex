@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import * as React from 'react';
 
 import '../styles/globals.css';
@@ -5,22 +6,16 @@ import '../styles/globals.css';
 import Player from '../components/layout/Player';
 import Sidebar from '../components/layout/sidebar/Sidebar';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Nex | Music Player',
-    template: '%s',
+    template: '%s | Nex',
   },
-  siteName: 'Nex | Music Player',
+  applicationName: 'Nex | Music Player',
   description: 'A spotify inspired music players for communities and groups',
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://nex.theditor.xyz',
-  type: 'website',
+  authors: {name: "ThEditor", url: 'https://nex.theditor.xyz'},
   robots: 'follow, index',
-  /**
-   * No need to be filled, will be populated with openGraph function
-   * If you wish to use a normal image, just specify the path below
-   */
-  image: 'https://theditor.xyz/assets/img/profile-img.jpg',
+  icons: {icon:'https://theditor.xyz/assets/img/profile-img.jpg'},
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

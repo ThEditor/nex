@@ -1,15 +1,7 @@
-'use client';
-import * as React from 'react';
-
-import Seo from '@/components/Seo';
-
-export default function AccountPage() {
-  return (
-    <>
-      <Seo />
-      <main className='flex items-center justify-center'>
-        <h1>Account Settings Here</h1>
-      </main>
-    </>
-  );
+import { Metadata } from "next"
+export const metadata: Metadata = {
+  title: 'Account',
+}
+export default function Account(){
+  return;
 }
