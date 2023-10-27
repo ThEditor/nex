@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import '../styles/globals.css';
 
-import Player from '../components/layout/Player';
-import Sidebar from '../components/layout/sidebar/Sidebar';
+import Player from '../components/Player';
+import Sidebar from '../components/sidebar/Sidebar';
 
 export const metadata: Metadata = {
   title: {
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   },
   applicationName: 'Nex | Music Player',
   description: 'A spotify inspired music players for communities and groups',
-  authors: {name: "ThEditor", url: 'https://nex.theditor.xyz'},
+  authors: { name: 'ThEditor', url: 'https://nex.theditor.xyz' },
   robots: 'follow, index',
-  icons: {icon:'https://theditor.xyz/assets/img/profile-img.jpg'},
+  icons: { icon: 'https://theditor.xyz/assets/img/profile-img.jpg' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

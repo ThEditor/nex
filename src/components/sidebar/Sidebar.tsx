@@ -6,8 +6,8 @@ import { RiLoginBoxFill, RiLogoutBoxFill, RiUser3Fill } from 'react-icons/ri';
 
 import clsxm from '@/lib/clsxm';
 
-import SidebarGroup from '@/components/layout/sidebar/SidebarGroup';
 import NextImage from '@/components/NextImage';
+import SidebarGroup from '@/components/sidebar/SidebarGroup';
 
 interface SidebarProps {
   className?: string;
@@ -71,8 +71,7 @@ export default function Sidebar({ className }: SidebarProps) {
             id: 'auth',
             icon: signedIn ? RiLogoutBoxFill : RiLoginBoxFill,
             clickAction: () => {
-              if (!signedIn && pathname !== '/login')
-                router.push('/login');
+              if (!signedIn && pathname !== '/login') router.push('/login');
               if (signedIn) router.push('/logout');
             },
           },
