@@ -1,3 +1,6 @@
+'use client';
+import { redirect } from 'next/navigation';
+
 import clsxm from '@/lib/clsxm';
 
 import NextImage from '@/components/NextImage';
@@ -5,7 +8,7 @@ import NextImage from '@/components/NextImage';
 export interface CarouselItemProps {
   title: string;
   subtitle: string;
-  clickAction: () => void;
+  link: string;
   imgSrc: string;
   className?: string;
 }
@@ -13,7 +16,7 @@ export interface CarouselItemProps {
 export default function CarouselItem({
   title,
   subtitle,
-  clickAction,
+  link,
   imgSrc,
   className,
 }: CarouselItemProps) {
@@ -23,7 +26,7 @@ export default function CarouselItem({
         className,
         'text-light font-quicksand hover:bg-light flex w-fit cursor-pointer select-none flex-col gap-1 rounded-3xl p-3 transition-all ease-linear hover:bg-opacity-10'
       )}
-      onClick={() => clickAction()}
+      onClick={() => redirect(link)}
     >
       <NextImage
         style={{ borderRadius: '20%' }}

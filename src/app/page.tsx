@@ -15,17 +15,13 @@ export default function HomePage() {
         {
           title: 'Life in a bubble',
           subtitle: 'The van',
-          clickAction: () => {
-            return;
-          },
+          link: '/',
           imgSrc: '/images/test.png',
         },
         {
           title: 'Life in a bubble',
           subtitle: 'The van',
-          clickAction: () => {
-            return;
-          },
+          link: '/',
           imgSrc: '/images/test.png',
         },
       ],
@@ -36,17 +32,13 @@ export default function HomePage() {
         {
           title: 'Life in a bubble',
           subtitle: 'The van',
-          clickAction: () => {
-            return;
-          },
+          link: '/',
           imgSrc: '/images/test.png',
         },
         {
           title: 'Life in a bubble',
           subtitle: 'The van',
-          clickAction: () => {
-            return;
-          },
+          link: '/',
           imgSrc: '/images/test.png',
         },
       ],
