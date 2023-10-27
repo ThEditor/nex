@@ -1,15 +1,14 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
 export const metadata: Metadata = {
-  title: "Login",
-}
-
+  title: 'Login',
+};
 
 export default function LoginPage() {
-
   const signedin = false;
   if (signedin) {
     redirect('/');
