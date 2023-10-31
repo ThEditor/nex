@@ -1,20 +1,17 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 import Button from '@/components/buttons/Button';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
+export const metadata: Metadata = {
+  title: 'Login',
+};
+
 export default function LoginPage() {
-  const router = useRouter();
   const signedin = false;
-
-  useEffect(() => {
-    if (signedin) router.push('/');
-  }, [router, signedin]);
-
   if (signedin) {
-    router.push('/');
-    return <></>;
+    redirect('/');
   }
 
   return !signedin ? (

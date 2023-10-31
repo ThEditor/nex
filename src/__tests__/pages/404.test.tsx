@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 
-import NotFoundPage from '@/pages/404';
+import NotFoundPage from '@/app/not-found';
 
-describe('404', () => {
+describe('not-found', () => {
   it('renders a heading', () => {
     render(<NotFoundPage />);
 

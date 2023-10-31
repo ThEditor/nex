@@ -1,3 +1,4 @@
+'use client';
 import { IconType } from 'react-icons/lib';
 
 import clsxm from '@/lib/clsxm';

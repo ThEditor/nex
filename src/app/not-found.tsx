@@ -2,13 +2,10 @@ import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
 import ArrowLink from '@/components/links/ArrowLink';
-import Seo from '@/components/Seo';
 
 export default function NotFoundPage() {
   return (
     <div className='h-full'>
-      <Seo templateTitle='Not Found' />
-
       <main className='h-full'>
         <section className='h-full bg-white'>
           <div className='layout flex h-full flex-col items-center justify-center text-center text-black'>

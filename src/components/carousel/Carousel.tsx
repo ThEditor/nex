@@ -15,7 +15,7 @@ export default function Carousel({ data }: CarouselProps) {
           title={v.title}
           subtitle={v.subtitle}
           imgSrc={v.imgSrc}
-          clickAction={v.clickAction}
+          link={v.link}
         />
       ))}
     </div>
